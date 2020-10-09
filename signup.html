@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;background-image:url(bg.jpg);-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+form {border: 3px solid #f1f1f1;width: 50%; margin-left: 140px;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(166, 64, 48);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 15%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.sign{
+  position: absolute;
+  left: 695px;
+  top:55px;
+}
+.Thanks{
+  font-size: 45px;
+  color: #990000;
+}
+.mySlides {display:none;margin-left: 900px;margin-top: -500px;}
+/* Change styles for span and cancel button on extra small screens 
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}*/
+</style>
+</head>
+<body>
+<div class="sign_up">
+<h2>Enroll Now</h2>
+<div class="color">
+<form action="#about" method="post">
+  <div class="imgcontainer">
+    <img src="signup.jpg" alt="login" class="avatar">
+  </div>
+  <div class="sign"></div>
+
+  <div class="container">
+     <label for="uname"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="uname" required>
+
+    <label for="uname"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw"><b>Confirm Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Subscribe</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw"> <a href="#">Forgot password?</a></span>
+  </div>
+ </form>
+
+
+
+  <div class="mySlides w3-container w3-red">
+
+    <img class="mySlides" src="class.jpg" style="width:28%">
+ <h1 class="Thanks"><b><i>Thanks For Subscribing!!!</i></b></h1>
+  </div>
+
+  <img class="mySlides" src="group.jpg" style="width:28%">
+<img class="mySlides" src="class.jpg" style="width:28%">
+
+  <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+ 
+  
+  </div>
+
+  <img class="mySlides" src="class2.jpg" style="width:28%" "height: 300">
+
+</div>
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 2000); 
+}
+</script> 
+</div>  
+</div>
+</body>
+</html>
